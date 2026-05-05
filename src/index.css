@@ -1,0 +1,100 @@
+/* Minimal custom CSS - everything else uses Bootstrap */
+
+/* Alert toast stack */
+.alert-stack {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1060;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 320px;
+}
+
+/* Wishlist heart overlay on product card */
+.wishlist-overlay-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0;
+}
+
+.wishlist-overlay-btn:hover {
+  border-color: #dc3545;
+}
+
+/* Product image container */
+.product-img-container {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  overflow: hidden;
+}
+
+.product-img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  padding: 12px;
+}
+
+/* Price range slider */
+input[type="range"] {
+  width: 100%;
+}
+
+/* Quantity input in cart */
+.qty-input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+/* Size buttons on detail page */
+.size-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.size-btn.active {
+  background: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+/* Delivery features row */
+.delivery-features {
+  display: flex;
+  gap: 24px;
+}
+
+.delivery-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.72rem;
+  color: #666;
+  text-align: center;
+  gap: 4px;
+}
