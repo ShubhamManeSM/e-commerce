@@ -56,12 +56,12 @@ export const StoreProvider = ({ children }) => {
           fetchAddresses(),
           fetchOrders(),
         ]);
-      if (productsData.status === 'fulfilled') setProducts(productsData.value);
-      if (categoriesData.status === 'fulfilled') setCategories(categoriesData.value);
-      if (cartData.status === 'fulfilled') setCart(cartData.value);
-      if (wishlistData.status === 'fulfilled') setWishlist(wishlistData.value);
-      if (addressData.status === 'fulfilled') setAddresses(addressData.value);
-      if (ordersData.status === 'fulfilled') setOrders(ordersData.value);
+      if (productsData.status === 'fulfilled') setProducts(productsData.value); else console.error("Products error:", productsData.reason);
+      if (categoriesData.status === 'fulfilled') setCategories(categoriesData.value); else console.error("Categories error:", categoriesData.reason);
+      if (cartData.status === 'fulfilled') setCart(cartData.value); else console.error("Cart error:", cartData.reason);
+      if (wishlistData.status === 'fulfilled') setWishlist(wishlistData.value); else console.error("Wishlist error:", wishlistData.reason);
+      if (addressData.status === 'fulfilled') setAddresses(addressData.value); else console.error("Address error:", addressData.reason);
+      if (ordersData.status === 'fulfilled') setOrders(ordersData.value); else console.error("Orders error:", ordersData.reason);
     } catch (err) {
       console.error('Error loading data:', err);
     } finally {
