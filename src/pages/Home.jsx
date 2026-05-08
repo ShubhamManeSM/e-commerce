@@ -33,7 +33,7 @@ const Home = () => {
                   <img
                     src={categoryImages[cat.name] || `https://via.placeholder.com/150x100?text=${cat.name}`}
                     alt={cat.name}
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                   />
                 </div>
                 <p className="fw-semibold small mt-2 mb-0">{cat.name}</p>
@@ -43,11 +43,11 @@ const Home = () => {
         </Row>
 
         {/* Hero Banner */}
-        <div className="rounded mb-4 overflow-hidden" style={{ height: 500 }}>
+        <div className="rounded mb-4 overflow-hidden" style={{ height: 400 }}>
           <img
             src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80"
             alt="Fashion Collection"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
           />
         </div>
 
@@ -57,7 +57,7 @@ const Home = () => {
             <Card className="border">
               <Card.Body className="d-flex align-items-center gap-3 p-4" style={{ cursor: 'pointer' }} onClick={() => navigate('/products?search=summer')}>
                 <div className="rounded overflow-hidden" style={{ width: 120, height: 120, flexShrink: 0 }}>
-                  <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&q=80" alt="Summer Collection" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300&q=80" alt="Summer Collection" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
                 </div>
                 <div>
                   <p className="text-muted text-uppercase small fw-semibold mb-1" style={{ letterSpacing: 1, fontSize: '0.7rem' }}>NEW ARRIVALS</p>
@@ -71,7 +71,7 @@ const Home = () => {
             <Card className="border">
               <Card.Body className="d-flex align-items-center gap-3 p-4" style={{ cursor: 'pointer' }} onClick={() => navigate('/products?search=winter')}>
                 <div className="rounded overflow-hidden" style={{ width: 120, height: 120, flexShrink: 0 }}>
-                  <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&q=80" alt="Winter Collection" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300&q=80" alt="Winter Collection" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }} />
                 </div>
                 <div>
                   <p className="text-muted text-uppercase small fw-semibold mb-1" style={{ letterSpacing: 1, fontSize: '0.7rem' }}>NEW ARRIVALS</p>

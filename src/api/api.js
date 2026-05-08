@@ -98,6 +98,24 @@ export const createAddressAPI = async (data) => {
   return res.json();
 };
 
+export const updateAddressAPI = async (id, data) => {
+  const res = await fetch(`${BASE_URL}/address/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error("Failed to update address");
+  return res.json();
+};
+
+export const deleteAddressAPI = async (id) => {
+  const res = await fetch(`${BASE_URL}/address/${id}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) throw new Error("Failed to delete address");
+  return res.json();
+};
+
 // ===================== ORDERS =====================
 
 export const fetchOrders = async () => {

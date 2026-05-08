@@ -12,6 +12,8 @@ import {
   removeFromWishlistAPI,
   fetchAddresses,
   createAddressAPI,
+  updateAddressAPI,
+  deleteAddressAPI,
   fetchOrders,
   createOrderAPI,
 } from '../api/api';
@@ -164,6 +166,26 @@ export const StoreProvider = ({ children }) => {
     }
   };
 
+  const updateAddress = async (id, data) => {
+    try {
+      const updatedAddress = await updateAddressAPI(id, data);
+      setAddresses(prev => prev.map(addr => addr._id === id ? updatedAddress : addr));
+      addAlert('Address updated!');
+    } catch {
+      addAlert('Failed to update address', 'danger');
+    }
+  };
+
+  const removeAddress = async (id) => {
+    try {
+      await deleteAddressAPI(id);
+      setAddresses(prev => prev.filter(addr => addr._id !== id));
+      addAlert('Address removed!');
+    } catch {
+      addAlert('Failed to remove address', 'danger');
+    }
+  };
+
   // ---- Order actions ----
   const placeOrder = async (orderData) => {
     try {
@@ -192,7 +214,8 @@ export const StoreProvider = ({ children }) => {
         addToCart, updateCartQuantity, removeFromCart,
         toggleWishlist, isInWishlist, isInCart,
         addToWishlist, removeFromWishlist, moveToCart, moveToWishlist,
-        addAddress, placeOrder, getProductById, loadInitialData,
+        addAddress, updateAddress, removeAddress, placeOrder,
+        getProductById, loadInitialData,
       }}
     >
       {children}
