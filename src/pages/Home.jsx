@@ -47,7 +47,7 @@ const Home = () => {
           <img
             src="https://images.pexels.com/photos/4062467/pexels-photo-4062467.jpeg"
             alt="Fashion Collection"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 30%' }}
           />
         </div>
 
