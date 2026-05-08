@@ -22,7 +22,7 @@ const Navigation = () => {
     <Navbar bg="white" sticky="top" className="border-bottom shadow-sm py-2">
       <Container className="flex-wrap">
         <Navbar.Brand as={Link} to="/" className="fw-semibold fs-5 text-dark me-auto">
-          MyShoppingSite
+          e-commerce
         </Navbar.Brand>
 
         {/* Right Side Icons & Profile */}

@@ -45,7 +45,7 @@ const Home = () => {
         {/* Hero Banner */}
         <div className="rounded mb-4 overflow-hidden" style={{ height: 400 }}>
           <img
-            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80"
+            src="https://images.pexels.com/photos/4062467/pexels-photo-4062467.jpeg"
             alt="Fashion Collection"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
           />
