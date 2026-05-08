@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { StoreContext } from '../context/StoreContext';
+import bannerImg from '../assets/banner.png';
 
 const Home = () => {
   const { categories } = useContext(StoreContext);
@@ -45,7 +46,7 @@ const Home = () => {
         {/* Hero Banner */}
         <div className="rounded mb-4 overflow-hidden" style={{ height: 400 }}>
           <img
-            src="https://images.pexels.com/photos/4062467/pexels-photo-4062467.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={bannerImg}
             alt="Fashion Collection"
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 35%' }}
           />
