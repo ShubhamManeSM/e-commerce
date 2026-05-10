@@ -60,12 +60,15 @@ const ProductList = () => {
 
             {/* Price */}
             <div className="mb-3">
-              <p className="fw-bold small mb-2">Price</p>
+              <div className="d-flex justify-content-between align-items-center mb-2">
+                <p className="fw-bold small mb-0">Price</p>
+                <span className="badge bg-light text-dark border">Up to ₹{priceRange}</span>
+              </div>
               <Form.Range min={500} max={5000} step={100} value={priceRange} onChange={(e) => setPriceRange(Number(e.target.value))} />
-              <div className="d-flex justify-content-between text-muted" style={{ fontSize: '0.75rem' }}>
-                <span>500</span>
-                <span>₹{priceRange}</span>
-                <span>5000</span>
+              <div className="d-flex justify-content-between text-muted px-1" style={{ fontSize: '0.75rem' }}>
+                <span>₹500</span>
+                <span>₹3000</span>
+                <span>₹5000</span>
               </div>
             </div>
 
