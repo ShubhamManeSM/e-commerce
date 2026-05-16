@@ -49,7 +49,7 @@ function App() {
       </main>
 
       <footer className="bg-dark text-white text-center py-3 mt-auto small">
-        &copy; {new Date().getFullYear()} MyShoppingSite. All rights reserved.
+        &copy; {new Date().getFullYear()} TrendHive. All rights reserved.
       </footer>
     </div>
   );

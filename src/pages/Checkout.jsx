@@ -48,7 +48,7 @@ const Checkout = () => {
       <Container className="py-5 text-center">
         <i className="bi bi-check-circle-fill text-success" style={{ fontSize: '4.5rem' }}></i>
         <h4 className="fw-bold">Order Placed Successfully!</h4>
-        <p className="text-muted">Thank you for shopping with MyShoppingSite.</p>
+        <p className="text-muted">Thank you for shopping with TrendHive.</p>
         <Button variant="dark" className="mt-2" onClick={() => navigate('/products')}>Continue Shopping</Button>
       </Container>
     );
